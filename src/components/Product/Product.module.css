@@ -42,11 +42,11 @@ button{
     background-color: #fff;
 }
 
-.quantity :first-child{
-    background-color: #F9F7F7;
+.decrement{
+    background-color: #fff;
 }
 
-.quantity :last-child{
+.increment{
     background-color: #112D4E;
     color: #F9F7F7;
 }

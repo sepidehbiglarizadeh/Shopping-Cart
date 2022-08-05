@@ -1,8 +1,8 @@
 import styles from "./Product.module.css";
-// import { BiTrash } from "react-icons/bi";
+import { BiTrash } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
 
-const Product = ({product,onIncrement}) => {
+const Product = ({product,onIncrement,onDecrement,onDelete}) => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -13,11 +13,11 @@ const Product = ({product,onIncrement}) => {
         </div>
       </div>
       <div className={styles.quantity}>
-        <button>-</button>
+        <button className={styles.decrement} onClick={onDecrement}>{product.quantity>1 ? "-": <BiTrash/>}</button>
         <span>{product.quantity}</span>
-        <button onClick={onIncrement}>+</button>
+        <button className={styles.increment} onClick={onIncrement}>+</button>
       </div>
-      <button className={styles.remove}><IoIosClose size={20}/></button>
+      <button className={styles.remove} onClick={onDelete}><IoIosClose size={20}/></button>
       <span className={styles.price}>${product.price}</span>
     </div>
   );

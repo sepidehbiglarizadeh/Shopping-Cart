@@ -1,9 +1,10 @@
 import Product from "../Product/Product";
-import { useProducts } from "../Provider/ProductsProvider";
+import { useProducts, useProductsActions } from "../Provider/ProductsProvider";
 import styles from "./ProductsList.module.css";
 
 const ProductsList = () => {
   const products = useProducts();
+  const dispatch = useProductsActions();
 
   return (
     <div className={styles.container}>
@@ -17,6 +18,9 @@ const ProductsList = () => {
           <Product
             product={product}
             key={product.id}
+            onIncrement={() => dispatch({ type: "increment", id: product.id })}
+            onDecrement={() => dispatch({ type: "decrement", id: product.id })}
+            onDelete={() => dispatch({ type: "delete", id: product.id })}
           />
         );
       })}

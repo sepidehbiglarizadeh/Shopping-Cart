@@ -5,7 +5,20 @@ const ProductsContext = React.createContext();
 const ProductsContextDispatcher = React.createContext();
 
 const reducer = (state, action) => {
-  
+  switch(action.type){
+    case "increment":{
+      const index = state.findIndex((item) => item.id === action.id);
+      const product = { ...state[index] };
+      product.quantity++;
+      const updatedProducts = [...state];
+      updatedProducts[index] = product;
+      return updatedProducts;
+      
+    }
+    default :{
+      return state;
+    }
+  }
 }
 
 const ProductsProvider = ({ children }) => {

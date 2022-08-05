@@ -13,8 +13,8 @@ const Product = ({product,onIncrement,onDecrement,onDelete}) => {
         </div>
       </div>
       <div className={styles.quantity}>
-        <button className={styles.decrement} onClick={onDecrement}>{product.quantity>1 ? "-": <BiTrash/>}</button>
-        <span>{product.quantity}</span>
+        <button className={`${styles.decrement} ${product.quantity===1 && styles.red}`} onClick={onDecrement}>{product.quantity>1 ? "-": <BiTrash/>}</button>
+        <span className={styles.count}>{product.quantity}</span>
         <button className={styles.increment} onClick={onIncrement}>+</button>
       </div>
       <button className={styles.remove} onClick={onDelete}><IoIosClose size={20}/></button>

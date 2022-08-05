@@ -24,26 +24,37 @@
     margin-right: 2rem;
 }
 
-.size {
-  padding: 1rem 1.5rem;
+.quantity{
   border: 1px solid #c9c9c9;
+    
 }
 
 .quantity span, button{
   padding: 1rem 1.5rem;
-  border: 1px solid #c9c9c9;
 }
+
+.count{
+    border-right: 1px solid #c9c9c9;
+    border-left: 1px solid #c9c9c9;
+}
+
 button{
     cursor: pointer;
+    border: none;
 }
 
 .remove{
     padding: 0.5rem 1rem;
     background-color: #fff;
+    border: 1px solid #c9c9c9;
+}
+
+.red{
+    color: #b91c1c;
 }
 
 .decrement{
-    background-color: #fff;
+    background-color: #F9F7F7;
 }
 
 .increment{

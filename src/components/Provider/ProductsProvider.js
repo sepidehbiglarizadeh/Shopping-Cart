@@ -5,6 +5,7 @@ const ProductsContext = React.createContext();
 const ProductsContextDispatcher = React.createContext();
 
 const reducer = (state, action) => {
+  
 }
 
 const ProductsProvider = ({ children }) => {

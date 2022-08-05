@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #c9c9c9;
+  padding: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.description :first-child{
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.content img{
+    width: 60px;
+    margin-right: 2rem;
+}
+
+.size {
+  padding: 1rem 1.5rem;
+  border: 1px solid #c9c9c9;
+}
+
+.quantity span, button{
+  padding: 1rem 1.5rem;
+  border: 1px solid #c9c9c9;
+}
+button{
+    cursor: pointer;
+}
+
+.remove{
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+}
+
+.quantity :first-child{
+    background-color: #F9F7F7;
+}
+
+.quantity :last-child{
+    background-color: #112D4E;
+    color: #F9F7F7;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 1.5rem;
+}

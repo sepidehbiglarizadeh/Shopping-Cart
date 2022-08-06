@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SearchBar from "../../common/SearchBar/SearchBar";
 import SelectComponent from "../../common/Select/Select";
 import { useProductsActions } from "../Provider/ProductsProvider";
 import styles from "./Filter.module.css";
@@ -34,7 +35,7 @@ const Filter = () => {
 
   return (
     <div className={styles.container}>
-      <div>Search box</div>
+      <SearchBar filter={filter}/>
       <div className={styles.filter}>
         <SelectComponent
           title="Filter by:"

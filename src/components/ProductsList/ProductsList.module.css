@@ -1,22 +1,42 @@
+.container {
+  background-color: #fff;
+  margin: auto;
+  width: 90%;
+  height: 70vh;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #c9c9c9;
+  display: none;
+}
+
+.header_item {
+  width: 35%;
+}
+
+.container :last-child{
+    border-bottom: none;
+}
+
+.text{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 720px) {
 .container{
-    background-color: #fff;
-    margin: auto;
-    width: 90%;
-    height: 70vh;
     padding: 2rem 5rem;
-    overflow-y: auto;
 }
-
-
-
-.header{
+  .header {
     display: flex;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-}
-
-.header_item{
-    width: 35%;
+  }
 }

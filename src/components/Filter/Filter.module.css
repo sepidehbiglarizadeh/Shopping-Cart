@@ -1,12 +1,20 @@
 .container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem;
 }
 
 .filter{
     display: flex;
      justify-content: space-between;
      align-items: center;
+     margin-top: 1rem;
+}
+
+@media screen and (min-width:720px) {
+    .filter{
+        margin-top: 0;
+    }
 }

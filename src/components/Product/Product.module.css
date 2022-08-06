@@ -2,67 +2,78 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #c9c9c9;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #c9c9c9;
   padding: 2rem 0;
   font-size: 1.2rem;
 }
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  margin-bottom: 1rem;
 }
 
-.description :first-child{
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+.description :first-child {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
-.content img{
-    width: 60px;
-    margin-right: 2rem;
+.content img {
+  width: 100px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 
-.quantity{
+.quantity {
   border: 1px solid #c9c9c9;
-    
 }
 
-.quantity span, button{
+.quantity span,
+button {
   padding: 1rem 1.5rem;
 }
 
-.count{
-    border-right: 1px solid #c9c9c9;
-    border-left: 1px solid #c9c9c9;
+.count {
+  border-right: 1px solid #c9c9c9;
+  border-left: 1px solid #c9c9c9;
 }
 
-button{
-    cursor: pointer;
-    border: none;
+button {
+  cursor: pointer;
+  border: none;
 }
 
-.remove{
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    border: 1px solid #c9c9c9;
+.remove {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
 }
 
-.red{
-    color: #b91c1c;
+.red {
+  color: #b91c1c;
 }
 
-.decrement{
-    background-color: #F9F7F7;
+.decrement {
+  background-color: #f9f7f7;
 }
 
-.increment{
-    background-color: #112D4E;
-    color: #F9F7F7;
+.increment {
+  background-color: #112d4e;
+  color: #f9f7f7;
 }
 
-.price{
-    font-weight: 700;
-    font-size: 1.5rem;
+.price {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 720px) {
+  .content {
+    flex-direction: row;
+    margin-bottom: 0;
+    width: 50%;
+  }
 }

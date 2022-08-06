@@ -31,6 +31,15 @@ const reducer = (state, action) => {
       const filteredProducts = state.filter((p) => p.id !== action.id);
       return filteredProducts;
     }
+    case "filter": {
+      const value=action.selectedOption.value;
+      if(value==="") {
+        return productsData;
+      }else{
+        const filteredProducts= productsData.filter((p)=> p.category.toLocaleLowerCase() === value.toLocaleLowerCase());
+        return filteredProducts;
+      }
+    }
     default: {
       return state;
     }

@@ -6,7 +6,7 @@ import styles from "./Filter.module.css";
 const filterOptions = [
   { value: "", label: "All" },
   { value: "Clothes", label: "Clothes" },
-  { value: "Jewerly", label: "Jewerly" },
+  { value: "Jewelery", label: "Jewelery" },
   { value: "Electronics", label: "Electronics" },
 ];
 

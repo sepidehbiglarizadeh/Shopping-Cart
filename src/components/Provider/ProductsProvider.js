@@ -33,21 +33,34 @@ const reducer = (state, action) => {
       return filteredProducts;
     }
     case "filter": {
-      const value=action.selectedOption.value;
-      if(value==="") {
+      const value = action.selectedOption.value;
+      if (value === "") {
         return productsData;
-      }else{
-        const filteredProducts= productsData.filter((p)=> p.category.toLocaleLowerCase() === value.toLocaleLowerCase());
+      } else {
+        const filteredProducts = productsData.filter(
+          (p) => p.category.toLocaleLowerCase() === value.toLocaleLowerCase()
+        );
         return filteredProducts;
       }
     }
-    case "sort":{
-      const value= action.selectedOption.value;
-      const products=[...state];
-      if(value==="Highest"){
-        return _.orderBy(products,["price"],"desc")
-      }else{
-        return _.orderBy(products,["price"],"asc")
+    case "sort": {
+      const value = action.selectedOption.value;
+      const products = [...state];
+      if (value === "Highest") {
+        return _.orderBy(products, ["price"], "desc");
+      } else {
+        return _.orderBy(products, ["price"], "asc");
+      }
+    }
+    case "search": {
+      const value = action.event.target.value;
+      if (value === "") {
+        return state;
+      } else {
+        const filteredProducts = state.filter((p) =>
+          p.title.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+        );
+        return filteredProducts;
       }
     }
     default: {
